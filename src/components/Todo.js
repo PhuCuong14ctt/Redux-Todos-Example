@@ -1,7 +1,9 @@
+// @flow
+
 import React from "react";
 import PropTypes from "prop-types";
 
-const Todo = ({ onClick, completed, text, created_at }) => (
+const Todo = ({ onClick, completed, text, created_at }: Object) => (
   <li
     onClick={onClick}
     style={{

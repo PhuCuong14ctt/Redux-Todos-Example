@@ -16,6 +16,11 @@ export const toggleTodo = id => ({
   id
 });
 
+const sortBy = sortType => ({
+  type: "SORT_BY",
+  sortType
+});
+
 export const VisibilityFilters = {
   SHOW_ALL: "SHOW_ALL",
   SHOW_COMPLETED: "SHOW_COMPLETED",

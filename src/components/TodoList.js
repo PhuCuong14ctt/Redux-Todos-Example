@@ -4,7 +4,19 @@ import React from "react";
 import PropTypes from "prop-types";
 import Todo from "./Todo";
 
-const TodoList = ({ todos, toggleTodo }: Object) => (
+type TodoType = {
+  id: number,
+  completed: boolean,
+  text: string,
+  created_at: string
+};
+
+type TodoListType = {
+  todos: Array<TodoType>,
+  toggleTodo: Function
+};
+
+const TodoList = ({ todos, toggleTodo }: TodoListType) => (
   <ul>
     {todos.map(todo => (
       <Todo key={todo.id} {...todo} onClick={() => toggleTodo(todo.id)} />

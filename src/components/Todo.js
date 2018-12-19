@@ -3,7 +3,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Todo = ({ onClick, completed, text, created_at }: Object) => (
+type TodoType = {
+  onClick: Function,
+  completed: boolean,
+  text: string,
+  created_at: string
+};
+
+const Todo = ({ onClick, completed, text, created_at }: TodoType) => (
   <li
     onClick={onClick}
     style={{
